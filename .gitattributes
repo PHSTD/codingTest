@@ -1,11 +1,76 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-* linguist-vendored
-*.cpp linguist-vendored=false
-*.cs linguist-vendored=false
-*.js linguist-vendored=false
-*.html linguist-vendored=false
-*.css linguist-vendored=false
-*.c linguist-vendored=false
-*.java linguist-vendored=false
+# 웹 개발 관련 언어 감지
+*.html linguist-detectable=true
+*.htm linguist-detectable=true
+*.css linguist-detectable=true
+*.scss linguist-detectable=true
+*.sass linguist-detectable=true
+*.less linguist-detectable=true
+*.mjs linguist-detectable=true
+*.ts linguist-detectable=true
+*.jsx linguist-detectable=true
+*.tsx linguist-detectable=true
+*.vue linguist-detectable=true
+*.c linguist-detectable=true
+*.cpp linguist-detectable=true
+*.cs linguist-detectable=true
+*.py linguist-detectable=true
+*.js linguist-detectable=true
+*.java linguist-detectable=true
+*.go linguist-detectable=true
+*.rb linguist-detectable=true
+*.php linguist-detectable=true
+*.swift linguist-detectable=true
+*.kt linguist-detectable=true
 
+# 서버 사이드 웹 개발 언어 추가
+*.php linguist-detectable=true
+*.jsp linguist-detectable=true
+*.asp linguist-detectable=true
+*.aspx linguist-detectable=true
+*.ejs linguist-detectable=true
+*.twig linguist-detectable=true
+*.hbs linguist-detectable=true
+*.liquid linguist-detectable=true
+
+# API 및 데이터 처리 관련 언어
+*.json linguist-detectable=true
+*.yaml linguist-detectable=true
+*.yml linguist-detectable=true
+*.xml linguist-detectable=true
+*.graphql linguist-detectable=true
+
+# 특정 폴더 제외 (서드파티 라이브러리, 자동 생성 파일)
+node_modules/** linguist-vendored
+vendor/** linguist-vendored
+third_party/** linguist-vendored
+dist/** linguist-vendored
+build/** linguist-vendored
+public/** linguist-vendored
+static/** linguist-vendored
+coverage/** linguist-vendored
+out/** linguist-vendored
+*.min.js linguist-vendored
+*.min.css linguist-vendored
+
+# 문서 및 설정 파일 제외
+*.md linguist-documentation
+*.txt linguist-documentation
+*.log linguist-documentation
+*.env linguist-documentation
+*.config linguist-documentation
+*.toml linguist-documentation
+*.ini linguist-documentation
+
+# 특정 파일을 특정 언어로 강제 지정
+Dockerfile linguist-language=Dockerfile
+Makefile linguist-language=Makefile
+*.sh linguist-language=Shell
+*.bat linguist-language=Batchfile
+*.ps1 linguist-language=PowerShell
+
+# GitHub가 감지하지 못하는 웹 관련 파일 강제 지정
+*.njk linguist-language=Nunjucks
+*.pug linguist-language=Pug
+*.mjml linguist-language=MJML
