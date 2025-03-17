@@ -6,7 +6,7 @@
 
 *.cpp linguist-detectable=true
 *.hpp linguist-detectable=true
-*.cs linguist-language=C
+*.cs linguist-language=true
 *.csproj linguist-detectable=true
 *.sln linguist-detectable=true
 *.java linguist-detectable=true
